@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="493.0" prefWidth="943.0" style="-fx-background-color: #1f1f1f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddVehicleFormController">
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="400.0" layoutX="282.0" layoutY="48.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/rice.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="98.0" layoutY="40.0" prefHeight="27.0" prefWidth="162.0" text="Vehicle No            :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="88.0" prefHeight="27.0" prefWidth="162.0" text="Vehicle Type         :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="153.0" prefHeight="27.0" prefWidth="168.0" text="Maximum Weight :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="220.0" prefHeight="27.0" prefWidth="162.0" text="No Of Passengers :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="vehicleNo" layoutX="292.0" layoutY="28.0" onAction="#moveToVehicleType" onKeyReleased="#checkingVehicleNo" opacity="0.7" prefHeight="39.0" prefWidth="368.0" promptText="XXX-xxxx" style="-fx-background-color: white;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="vehicleCmb" layoutX="292.0" layoutY="76.0" onAction="#moveToMaxWeight" opacity="0.7" prefHeight="37.0" prefWidth="368.0" promptText="Select Vehicle Type" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="maxWeight" layoutX="292.0" layoutY="143.0" onAction="#moveToNoOfPassengers" onKeyReleased="#checkingVehicleMaxWeight" opacity="0.7" prefHeight="39.0" prefWidth="368.0" promptText="xxxx" style="-fx-background-color: white;">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="noOfPassengers" layoutX="292.0" layoutY="213.0" onKeyReleased="#checkingNoOfPassengers" opacity="0.7" prefHeight="27.0" prefWidth="368.0" promptText="xx" style="-fx-background-color: white;">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXButton alignment="CENTER" layoutX="745.0" layoutY="198.0" onAction="#addVehicle" prefHeight="49.0" prefWidth="143.0" style="-fx-background-color: #003399; -fx-background-radius: 15;" text="+Save Vehicle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblVehicle" layoutX="56.0" layoutY="264.0" prefHeight="218.0" prefWidth="842.0" styleClass="table-row-cell" stylesheets="@../styles/style.css">
+        <columns>
+          <TableColumn fx:id="colVNo" prefWidth="233.0" text="Vehicle No" />
+          <TableColumn fx:id="colVType" prefWidth="188.0" text="Vehicle Type" />
+            <TableColumn fx:id="colMWeight" prefWidth="207.0" text="Maximum Weight" />
+            <TableColumn fx:id="colVPassengers" prefWidth="213.0" text="No Of Passengers" />
+        </columns>
+      </TableView>
+      <Label fx:id="vLabel3" layoutX="292.0" layoutY="190.0" prefHeight="21.0" prefWidth="368.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="vLabel2" layoutX="292.0" layoutY="121.0" prefHeight="21.0" prefWidth="368.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="vLabel1" layoutX="292.0" layoutY="4.0" prefHeight="21.0" prefWidth="368.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

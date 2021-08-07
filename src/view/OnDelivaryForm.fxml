@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="493.0" prefWidth="943.0" style="-fx-background-color: #616161;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OnDelivaryFormController">
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="400.0" layoutX="292.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/rice.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblOnDelivery" layoutX="51.0" layoutY="23.0" opacity="0.97" prefHeight="442.0" prefWidth="854.0" style="-fx-background-color: #a1a1a1;" styleClass="table-row-cell" stylesheets="@../styles/style.css">
+        <columns>
+          <TableColumn fx:id="colNo" prefWidth="196.0" text="Vehicle No" />
+          <TableColumn fx:id="colType" prefWidth="231.0" text="Vehicle Type" />
+            <TableColumn fx:id="colName" prefWidth="204.0" text="Driver Name" />
+            <TableColumn fx:id="colLeftTime" prefWidth="222.0" text="Left Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

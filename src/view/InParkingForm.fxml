@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="493.0" prefWidth="943.0" style="-fx-background-color: #616161;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InParkingFormController">
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="400.0" layoutX="292.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/rice.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblInParking" layoutX="51.0" layoutY="23.0" opacity="0.96" prefHeight="442.0" prefWidth="854.0" style="-fx-background-color: white;" styleClass="table-row-cell" stylesheets="@../styles/style.css">
+        <columns>
+          <TableColumn fx:id="colNo" prefWidth="185.0" text="Vehicle No" />
+          <TableColumn fx:id="colType" prefWidth="241.0" text="Vehicle Type" />
+            <TableColumn fx:id="colSlot" prefWidth="217.0" text="Parking Slot" />
+            <TableColumn fx:id="colTime" prefWidth="210.0" text="Parked Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

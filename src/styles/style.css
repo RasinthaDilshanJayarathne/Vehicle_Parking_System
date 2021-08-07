@@ -1,0 +1,14 @@
+.button-btnOne{
+    -fx-background-image:url('../assets/icons8_restart_48px_1.png');
+}
+.button-btnOne:pressed{
+    -fx-background-image:url('../assets/icons8_restart_48px_1.png');
+}
+.table-row-cell:odd{
+    -fx-background-color: #a3a3a3;
+    -fx-background-insets: 0,0 0 1 0;
+}
+.table-row-cell:even{
+    -fx-background-color:#707070;
+    -fx-background-insets: 0,0 0 1 0;
+}
